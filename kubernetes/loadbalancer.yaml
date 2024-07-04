@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: loadbalancer-santiago-giraldo
+  namespace: namespace-santiago-giraldo
+spec:
+  type: LoadBalancer
+  selector:
+    app: httpd
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+ 
